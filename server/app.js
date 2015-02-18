@@ -49,7 +49,7 @@ var t = new twit({
 t.track("#knoxdevstatus");
 
 t.on("tweet", function (tweet) {
-	var command = tweet.split();
+	var command = tweet.text.split(" ");
 	if(command.length === 3) {
 		var status = {};
 		status.name = command[1];
